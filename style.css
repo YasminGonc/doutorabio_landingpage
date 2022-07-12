@@ -1,0 +1,128 @@
+:root {
+    --roxo: #60408B;
+    --verde: #618B25;
+    --claro: #FCF0CC;
+    --extra: #FC5130;
+}
+header {
+    background: var(--roxo);
+    height: 100vh;
+    width: 98.79vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.infos {
+    width: 45%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.infos img {
+    width: 40%;
+}
+.infos p {
+    width: 88%;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--claro);
+}
+.infos p span {
+    color: var(--verde);
+    font-weight: bolder;
+}
+.infos a {
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background: var(--extra);
+    color: var(--claro);
+    width: 50%;
+    padding: 1rem;
+    cursor: pointer;
+}
+.foto {
+    width: 45%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto img{
+    width: 70%;
+}
+.paraquem {
+    background: var(--claro);
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+.paraquem-container {
+    width: 30%;
+    padding: 2rem 2rem 0rem 2rem;
+    border: 0.2rem solid var(--verde);
+}
+.paraquem-container h2 {
+    margin-bottom: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.5rem;
+    color: #618B25;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    column-gap: 1rem;
+}
+.checkbox span {
+    color: var(--extra);
+    font-weight: bold;
+}
+
+@media (max-width: 1024px){
+    header {
+        height: 50vh;
+    }
+    .infos, .foto {
+        height: 70%;
+    }
+    .infos a {
+        width: 70%;
+    }
+}
+@media (max-width: 768px){
+    .infos p, .infos a {
+        font-size: 1rem;
+    }
+    .foto img {
+        width: 80%;
+    }
+}
+@media (max-width: 530px){
+    header{
+        flex-direction: column;
+    }
+    .infos, .foto {
+        align-items: center;
+        height: 50%;
+        width: 70%;
+    }
+    .infos p, .infos a {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .infos a {
+        padding: 0.5rem;
+    }
+    .foto {
+        height: auto;
+    }
+    .paraquem-container {
+        width: 50%;
+    }
+}
