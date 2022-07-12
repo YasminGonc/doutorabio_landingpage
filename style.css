@@ -7,7 +7,6 @@
 header {
     background: var(--roxo);
     height: 100vh;
-    width: 98.79vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,7 +32,7 @@ header {
     color: var(--verde);
     font-weight: bolder;
 }
-.infos a {
+.infos a, .investimento a {
     text-decoration: none;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -83,6 +82,156 @@ header {
     color: var(--extra);
     font-weight: bold;
 }
+.aulas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--extra);
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+}
+.aulas h2 {
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: var(--claro);
+}
+.aulas-container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.aulas-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: var(--roxo);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.aulas-card-txt {
+    text-align: left;
+    color: var(--claro);
+    font-family: 'Assistant', sans-serif;
+}
+.aulas-card-txt h3 {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0.5rem; 
+}
+.qtd-aulas {
+    margin-top: 0.4rem;
+    color: darkgray;
+    font-size: 0.8rem;
+}
+.prof {
+    background: var(--claro);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prof-txt {
+    width: 40%;
+    padding: 2rem;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.2rem;
+}
+.prof-txt h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--roxo);
+    margin-bottom: 1rem;
+}
+.prof-txt h2 span {
+    font-weight: bold;
+}
+.investimento {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--roxo);
+}
+.investimento h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--verde);
+}
+.valores {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: darkgray;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.5rem;
+}
+.prazo {
+    border: 0.15rem solid var(--verde);
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.prazo h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--verde);
+    margin-bottom: 1rem;
+}
+.preco {
+    color: var(--verde);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+.preco span { 
+    font-size: 1.2rem;
+}
+.txt-obs, .txt-obs2 {
+    margin: 0.2rem 0 2rem 0;
+    font-size: 0.6rem;
+}
+.txt-obs2 {
+    margin-bottom: 4.5rem;
+}
+.total-prazo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    color: var(--verde);
+}
+.total-prazo span {
+    font-size: 0.8rem;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Assistant', sans-serif;
+    background: var(--claro);
+}
+footer h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1rem;
+    color: var(--roxo);
+}
+
 
 @media (max-width: 1024px){
     header {
@@ -101,6 +250,15 @@ header {
     }
     .foto img {
         width: 80%;
+    }
+    .aulas-container {
+        width: 80%;
+    }
+    .paraquem {
+        height: 50vh;
+    }
+    .investimento {
+        height: 60vh;
     }
 }
 @media (max-width: 530px){
@@ -124,5 +282,20 @@ header {
     }
     .paraquem-container {
         width: 50%;
+    }
+    .aulas-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .valores {
+        flex-direction: column;
+        gap: 0rem;
+    }
+    .valores p {
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 375px) {
+    .aulas-container {
+        grid-template-columns: 1fr;
     }
 }
