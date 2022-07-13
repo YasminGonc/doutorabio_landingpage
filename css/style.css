@@ -277,6 +277,7 @@ footer {
     gap: 1rem;
     font-family: 'Assistant', sans-serif;
     background: var(--claro);
+    text-align: center;
 }
 footer h2 {
     font-size: 2rem;
@@ -286,7 +287,7 @@ footer h2 {
     color: var(--roxo);
 }
 
-@media (max-width: 1024px){
+@media screen and (max-width: 1024px){
     header {
         height: 50vh;
     }
@@ -303,7 +304,21 @@ footer h2 {
         height: 20vh;
     }
 }
-@media (max-width: 768px){
+@media screen and (max-width: 912px){
+    .paraquem {
+        height: 50vh;
+    }
+    .paraquem-container {
+        width: 60%;
+    }
+    .prof {
+        height: 30vh;
+    }
+    .investimento {
+        height: 60vh;
+    }
+}
+@media screen and (max-width: 768px){
     .infos p, .infos a {
         font-size: 1rem;
     }
@@ -323,9 +338,10 @@ footer h2 {
         height: 60vh;
     }
 }
-@media (max-width: 530px){
+@media screen and (max-width: 540px){
     header{
         flex-direction: column;
+        height: 70vh;
     }
     .infos, .foto {
         align-items: center;
@@ -343,10 +359,23 @@ footer h2 {
         height: auto;
     }
     .paraquem-container {
-        width: 50%;
+        width: 70%;
     }
     .aulas-container {
         grid-template-columns: 1fr 1fr;
+    }
+    .prof-txt {
+        width: 80%;
+    }
+    .investimento {
+        height: 100vh;
+    }
+    .investimento h2 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .investimento a{
+        width: 80%;
     }
     .valores {
         flex-direction: column;
@@ -356,19 +385,22 @@ footer h2 {
         margin-bottom: 1rem;
     }
 }
-@media (max-width: 768px) {
-    .aulas-container-conteudo.on {
-        height: 75vh;
-    }
-    .conteudo {
-        width: 60%;
-    }
-}
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .aulas-container {
         grid-template-columns: 1fr;
     }
     .aulas-container-conteudo.on {
         height: 100vh;
+    }
+}
+@media screen and (max-width: 280px) {
+    .paraquem {
+        height: 80vh;
+    }
+    .prof {
+        height: 50vh;
+    }
+    .investimento {
+        height: 110vh;
     }
 }
