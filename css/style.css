@@ -386,11 +386,17 @@ footer h2 {
     }
 }
 @media screen and (max-width: 375px) {
+    .paraquem {
+        height: 70vh;
+    }
     .aulas-container {
         grid-template-columns: 1fr;
     }
     .aulas-container-conteudo.on {
         height: 100vh;
+    }
+    .prof {
+        height: 40vh;
     }
 }
 @media screen and (max-width: 280px) {
