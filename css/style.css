@@ -3,6 +3,7 @@
     --verde: #618B25;
     --claro: #FCF0CC;
     --extra: #FC5130;
+    --darkgray: darkgray;
 }
 header {
     background: var(--roxo);
@@ -112,6 +113,7 @@ header {
     background: var(--roxo);
     padding: 1rem;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 .aulas-card-txt {
     text-align: left;
@@ -124,7 +126,7 @@ header {
 }
 .qtd-aulas {
     margin-top: 0.4rem;
-    color: darkgray;
+    color: var(--darkgray);
     font-size: 0.8rem;
 }
 .prof {
@@ -170,7 +172,7 @@ header {
     display: flex;
     align-items: center;
     gap: 2rem;
-    color: darkgray;
+    color: var(--darkgray);
     font-family: 'Assistant', sans-serif;
     font-size: 1.5rem;
 }
@@ -215,6 +217,58 @@ header {
 .total-prazo span {
     font-size: 0.8rem;
 }
+.aulas-container-conteudo {
+    display: none;
+}
+.aulas-container-conteudo.on {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 170vh;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(169, 169, 169, 0.411);
+}
+.conteudo {
+    background: var(--claro);
+    width: 40vw;
+    height: 50vh;
+    text-align: right;
+    border-radius: 0.5rem;
+}
+.conteudo img {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.conteudo-txt {
+    width: 90%;
+    text-align: left;
+    padding-left: 1rem;
+    font-family: 'Assistant', sans-serif;
+}
+.conteudo-txt h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--roxo);
+    margin-bottom: 0.5rem;
+}
+.conteudo-txt p {
+    color: var(--roxo);
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+.conteudo-txt li {
+    margin-top: 0.5rem;
+}
+.conteudo-txt li span {
+    color: var(--roxo);
+    font-weight: bold;
+}
 footer {
     display: flex;
     flex-direction: column;
@@ -232,7 +286,6 @@ footer h2 {
     color: var(--roxo);
 }
 
-
 @media (max-width: 1024px){
     header {
         height: 50vh;
@@ -242,6 +295,12 @@ footer h2 {
     }
     .infos a {
         width: 70%;
+    }
+    .aulas-container-conteudo.on {
+        top: 100vh
+    }
+    .conteudo {
+        height: 20vh;
     }
 }
 @media (max-width: 768px){
@@ -258,6 +317,9 @@ footer h2 {
         height: 50vh;
     }
     .investimento {
+        height: 60vh;
+    }
+    .aulas-container-conteudo.on {
         height: 60vh;
     }
 }
@@ -294,8 +356,19 @@ footer h2 {
         margin-bottom: 1rem;
     }
 }
+@media (max-width: 768px) {
+    .aulas-container-conteudo.on {
+        height: 75vh;
+    }
+    .conteudo {
+        width: 60%;
+    }
+}
 @media (max-width: 375px) {
     .aulas-container {
         grid-template-columns: 1fr;
+    }
+    .aulas-container-conteudo.on {
+        height: 100vh;
     }
 }
