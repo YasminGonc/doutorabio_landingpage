@@ -221,7 +221,7 @@ header {
     display: none;
 }
 .aulas-container-conteudo.on {
-    height: 100vh;
+    height: 93vh;
     width: 100vw;
     position: absolute;
     top: 170vh;
@@ -230,14 +230,13 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    background: rgba(169, 169, 169, 0.411);
 }
 .conteudo {
     background: var(--claro);
     width: 40vw;
-    height: 50vh;
     text-align: right;
     border-radius: 0.5rem;
+    padding-bottom: 2rem;
 }
 .conteudo img {
     cursor: pointer;
@@ -298,10 +297,8 @@ footer h2 {
         width: 70%;
     }
     .aulas-container-conteudo.on {
-        top: 100vh
-    }
-    .conteudo {
-        height: 20vh;
+        height: 47vh;
+        top: 120vh;
     }
 }
 @media screen and (max-width: 912px){
@@ -316,6 +313,10 @@ footer h2 {
     }
     .investimento {
         height: 60vh;
+    }
+    .aulas-container-conteudo.on {
+        height: 50vh;
+        top: 100vh;
     }
 }
 @media screen and (max-width: 768px){
@@ -384,19 +385,33 @@ footer h2 {
     .valores p {
         margin-bottom: 1rem;
     }
+    .conteudo {
+        width: 60%;
+    }
+    .aulas-container-conteudo.on {
+        top: 130vh;
+    }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 393px) {
     .paraquem {
         height: 70vh;
     }
     .aulas-container {
         grid-template-columns: 1fr;
     }
+}
+@media screen and (max-width: 375px) {
+    .paraquem {
+        height: 70vh;
+    }
     .aulas-container-conteudo.on {
         height: 100vh;
     }
     .prof {
         height: 40vh;
+    }
+    .investimento {
+        height: 110vh;
     }
 }
 @media screen and (max-width: 280px) {
